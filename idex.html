@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla de Multiplicar</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>GENERADOR DE TABLAS DE MULTIPLICAR</h1>
+      <link rel="stylesheet" href="stylo.css" />
+    </header>
+
+    <main>
+      <div>
+        <label for="">Que tabla quieres generar: </label>
+        <input type="number" name="" id="num" />
+        <button id="op" onclick="tabla()">Generar Tabla</button>
+        <br /><br />
+        <span id="n1"></span>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        <b>Diego Flores Aguirres,Maria Abraham, Enzo Gonzalez, Franco Cornejo-Com4-TUP 1°2°</b>
+      </p>
+    </footer>
+
+    <script>
+      function tabla() {
+        var clase = document.getElementById("n1");
+        clase.classList.add("efecto");
+        document.querySelector("#n1").innerHTML = "";
+        const n = parseInt(document.querySelector("#num").value);
+        let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        for (var i = 0; i < numeros.length; i++) {
+          document.querySelector("#n1").innerHTML +=
+            n + " x " + numeros[i] + " = " + numeros[i] * n + "<br>";
+        }
+      }
+    </script>
+  </body>
+</html>
